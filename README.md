@@ -13,7 +13,7 @@ This is an app skeleton for the Slim PHP Micro-Framework to get started quickly 
 ``` bash
 $ composer create-project -s dev yoganandgopalan/slim-skeleton [app-name]
 ```
-### Download packages
+### Download vendor packages
 ``` bash
 $ composer update
 ```
