@@ -1,0 +1,51 @@
+{
+    "name": "yoganandgopalan/slim-skeleton",
+    "description": "Boilerplate for building a REST API with Slim PHP micro-framework With Limit, Filtering, Full text search, Sorting",
+    "keywords": ["slim", "eloquent", "framework", "boilerplate", "skeleton", "rest", "api","Limit the fields","Filtering","Full text search","Sorting","Define limit and offset"],
+    "homepage": "https://github.com/yoganandgopalan/slim-skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yoganand Gopalan",
+            "email": "yoganand_19_19@yahoo.com",
+            "homepage": "https://github.com/yoganandgopalan"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "awurth/slim-validation": "^3.0",
+        "cartalyst/sentinel": "^2.0",
+        "firebase/php-jwt": "^5.0",
+        "illuminate/database": "^5.4",
+        "illuminate/events": "^5.4",
+        "incenteev/composer-parameter-handler": "^2.1",
+        "monolog/monolog": "^1.23",
+        "respect/validation": "^1.1",
+        "slim/slim": "^3.8",
+        "symfony/console": "^3.3",
+        "symfony/http-foundation": "^3.3",
+        "symfony/yaml": "^3.3"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:8080 -t public public/index.php",
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}
