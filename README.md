@@ -63,7 +63,7 @@ If you pass an array as the second parameter to `parseSingle`, there now have to
 This allows us to pass multiple conditions like:
 
 ```php
-SortFilter::parseSingle($books, array('id_origin' => 'Random Bookstore Ltd', 'id' => 1337));
+SortFilter::parseSingle($request, $books, array('id_origin' => 'Random Bookstore Ltd', 'id' => 1337));
 ```
 
 ### URL parsing
@@ -95,7 +95,7 @@ SortFilter::parseSingle($request, $book, 1);
 
 If you handle a GET request on a resource representing multiple objects like for example `/api/books`, use the `parseMultiple` method.
 
-**parseMultiple($request ,$queryBuilder, $fullTextSearchColumns, [$queryParams]):**
+**parseMultiple($request, $queryBuilder, $fullTextSearchColumns, [$queryParams]):**
 * **$request**: Request from controller
 * **$queryBuilder**: Query builder object, Eloquent model or Eloquent relation
 * **$fullTextSearchColumns**: An array which defines the columns used for full text search.
